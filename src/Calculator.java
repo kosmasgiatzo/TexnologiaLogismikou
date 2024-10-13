@@ -129,6 +129,14 @@ public class Calculator {
                 }
             }
         });
+        button11.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                a=Double.parseDouble(txtDisplay.getText());
+                op = "+";
+                txtDisplay.setText("");
+            }
+        });
 
     }
 
