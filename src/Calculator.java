@@ -137,6 +137,30 @@ public class Calculator {
                 txtDisplay.setText("");
             }
         });
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                a=Double.parseDouble(txtDisplay.getText());
+                op = "-";
+                txtDisplay.setText("");
+            }
+        });
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                a=Double.parseDouble(txtDisplay.getText());
+                op = "*";
+                txtDisplay.setText("");
+            }
+        });
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                a=Double.parseDouble(txtDisplay.getText());
+                op = "/";
+                txtDisplay.setText("");
+            }
+        });
 
     }
 
