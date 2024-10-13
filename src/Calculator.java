@@ -113,7 +113,22 @@ public class Calculator {
                 }
             }
         });
-
+        button16.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (txtDisplay.getText().contains("."))
+                {
+                    double pm = Double.parseDouble(txtDisplay.getText());
+                    pm =pm-1;
+                    txtDisplay.setText(String.valueOf(pm));
+                }else
+                {
+                    long PM=Long.parseLong(txtDisplay.getText());
+                    PM=PM-1;
+                    txtDisplay.setText(String.valueOf(PM));
+                }
+            }
+        });
 
     }
 
