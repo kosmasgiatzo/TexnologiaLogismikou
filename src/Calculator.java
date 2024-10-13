@@ -161,6 +161,45 @@ public class Calculator {
                 txtDisplay.setText("");
             }
         });
+        button6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String backspace = null;
+
+                if (txtDisplay.getText().length() > 0)
+                {
+                    StringBuilder strB =new StringBuilder(txtDisplay.getText());
+                    strB.deleteCharAt(txtDisplay.getText().length() - 1);
+                    backspace =String.valueOf(strB);
+                    txtDisplay.setText(backspace);
+                }
+            }
+        });
+        button5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                b= Double.parseDouble(txtDisplay.getText());
+
+                if (op == "+")
+                {
+                    result=a+b;
+                    txtDisplay.setText(String.valueOf(result));
+                }else if (op == "-")
+                {
+                    result= a-b;
+                    txtDisplay.setText(String.valueOf(result));
+                }else if (op == "")
+                {
+                    result= ab;
+                    txtDisplay.setText(String.valueOf(result));
+                }else if (op == "/")
+                {
+                    result= a/b;
+                    txtDisplay.setText(String.valueOf(result));
+                }
+
+            }
+        });
 
     }
 
