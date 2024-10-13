@@ -188,9 +188,9 @@ public class Calculator {
                 {
                     result= a-b;
                     txtDisplay.setText(String.valueOf(result));
-                }else if (op == "")
+                }else if (op == "*")
                 {
-                    result= ab;
+                    result= a*b;
                     txtDisplay.setText(String.valueOf(result));
                 }else if (op == "/")
                 {
